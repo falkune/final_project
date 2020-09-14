@@ -1,7 +1,6 @@
 body{
   margin: 0;
   padding: 0;
-  /*background-color: grey;*/
 }
 
 #front_index_container{
@@ -39,23 +38,39 @@ h1{
 
 #left_side{
   background-color: #a8dadc;
-  padding: 30% 15%;
+  position: fixed;
+  width: 15%;
+  height: 100%;
+  padding-top: 5%;
 }
 
-#home_container{
-  display: grid;
-  grid-template-columns: 18% 80%;
-  grid-column-gap: 2%;
+#right_side{
+  position: absolute;
+  left: 16%;
+  width: 85%;
 }
 
 #left_side ul li{
   list-style: none;
   font-size: x-large;
-  text-align: center;
+  margin-left: 6%;
+  padding: 3% 0%;
+}
+
+li a{
+  color: grey;
+  font-size: 1.1em;
+}
+
+
+li a:hover{
+  text-decoration: none;
+  color: white;
 }
 
 ul{
   padding-inline-start: 0px !important;
+  margin-top: 20px;
 }
 
 .small{
@@ -67,10 +82,73 @@ ul{
   width: 10%;
 }
 
-.question_body{
-  /*width: 60%;*/
-}
 
 .question_answer{
   width: 30%;
+}
+
+.badge-light{
+  position: absolute;
+  text-align: center;
+  width: 70%;
+  left: 15%;
+  bottom: 10px;
+  padding: 5%;
+  border-radius: 10px;
+}
+
+#myChart1{
+  display: block;
+  height: 350px !important;
+  width: 696px !important;
+}
+
+#myChart2{
+  display: block;
+  height: 350px !important;
+  width: 696px !important;
+}
+
+#myChart3{
+  display: block;
+  height: 350px !important;
+  width: 696px !important;
+}
+
+#graphics{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.graphic{
+  width: 50%;
+  margin-bottom: 30px;
+}
+
+#login{
+  padding: 15%;
+}
+
+.btn-primary{
+  width: 100%
+}
+
+.form-control{
+  margin: auto;
+  width: 93%;
+}
+
+.col-md-8{
+  max-width: 100% !important;
+}
+
+.container{
+  margin-top: 5%;
+}
+
+.card-header {
+  padding: .75rem 1.25rem !important;
+  margin-bottom: 0 !important;
+  background-color: #a8dadc !important;
+  border-bottom: none !important;
 }

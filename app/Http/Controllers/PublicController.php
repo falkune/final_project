@@ -51,8 +51,7 @@ class PublicController extends Controller
 			'question_20' => 'required|max:255',
 		]);
 
-		// recuperation de l'identifiant du visiteur dont le mail est fourni dans la tavle users
-		$user_id = User::where('email', request('question_1'))->first()->id;
+		$user_id = User::where('email', request('question_1'))->first()->id; // l'id de l'utilisateur
 		$user_link = User::where('email', request('question_1'))->first()->user_link;
 		if($user_link === NULL){
 			$link = uniqid();
@@ -61,9 +60,9 @@ class PublicController extends Controller
 			$user->save();
 
 			for($i = 2; $i <= 20; $i++){
-				$numero = Question::where('numero_question', $i)->first()->id;
+				$id_question = Question::where('numero_question', $i)->first()->id;
 				Question_User::insert([ 
-					['user_id' => $user_id, 'question_id' => $numero, 'user_reponse' => request('question_'.$i)]
+					['user_id' => $user_id, 'question_id' => $id_question, 'user_reponse' => request('question_'.$i)]
 				]);
 			}
 			
@@ -98,11 +97,11 @@ class PublicController extends Controller
 	 * @param  int  $id
 	 * @return \Illuminate\Http\Response
 	 */
-	public function show($id)
+	public function show($link)
 	{
-		$user_id = User::where('user_link', $id)->first()->id;
-		$user_email = User::where('user_link', $id)->first()->email;
-		$date = explode(' ',User::where('user_link', $id)->first()->updated_at);
+		$user = User::where('user_link', $link)->first();
+		
+		$date = explode(' ', $user['updated_at']);
 
 		$jour = explode('-', $date[0]);
 		$jour = $jour[2].'.'.$jour[1].'.'.$jour[0];
@@ -118,12 +117,12 @@ class PublicController extends Controller
 			if($question['numero_question']==1){
 				$reponse['numero_question'] = $question['numero_question'];
 				$reponse['libelle_question'] = $question['libelle_question'];
-				$reponse['reponse_question'] = $user_email;
+				$reponse['reponse_question'] = $user['email'];
 			}
 			else{
 				$reponse['numero_question'] = $question['numero_question'];
 				$reponse['libelle_question'] = $question['libelle_question'];
-				$reponse['reponse_question'] = Question_User::where(['user_id' => $user_id, 'question_id' => $question['id']])->first()->user_reponse;
+				$reponse['reponse_question'] = Question_User::where(['user_id' => $user['id'], 'question_id' => $question['id']])->first()->user_reponse;
 			}
 			array_push($reponses, $reponse);
 		}
@@ -133,21 +132,6 @@ class PublicController extends Controller
 			'jour' => $jour,
 			'heure' => $heure
 		]);
-		
-	}
-
-	
-
-	/**
-	 * Update the specified resource in storage.
-	 *
-	 * @param  \Illuminate\Http\Request  $request
-	 * @param  int  $id
-	 * @return \Illuminate\Http\Response
-	 */
-	public function update(Request $request, $id)
-	{
-		//
 	}
 
 }

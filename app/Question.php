@@ -12,6 +12,6 @@ class Question extends Model
     }
 
     public function listereponses(){
-		return $this->hasMany(Listereponse::class);
-	}
+  		return $this->hasMany(Listereponse::class);
+  	}
 }
