@@ -5,7 +5,6 @@ Accueil
 @endsection
 
 @section('contenue')
-	<h1> Accueil les diagrames </h1>
 	<div id="graphics">
 		<div class="graphic"><canvas id="myChart1"></canvas></div>
 		<div class="graphic"><canvas id="myChart2"></canvas></div>

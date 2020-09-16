@@ -5,7 +5,6 @@ Accueil
 @endsection
 
 @section('contenue')
-	<h1> Le questionnaire  </h1>
 	<table class="table-bordered small alert-dark">
 		<thead class="text-uppercase table-dark table">
 			<tr>

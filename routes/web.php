@@ -15,13 +15,13 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', 'PublicController@index');
-Route::post('save', 'PublicController@store');
-Route::get('mesReponses/{id}', 'PublicController@show');
+Route::post('save', 'SavesurveyController@store');
+Route::get('mesReponses/{id}', 'MyresponseController@show');
 
 Auth::routes();
 
 Route::get('/admin', 'HomeController@index')->name('accueil');
-Route::get('/accueil', 'HomeController@accueil');
-Route::get('/questionnaire', 'HomeController@questionnaire')->name('questionnaire');
-Route::get('/reponse', 'HomeController@reponse')->name('reponse');
-Route::get('/deconnexion', 'HomeController@deconnexion');
+Route::get('/accueil', 'AccueilController@index');
+Route::get('/questionnaire', 'QuestionController@index')->name('questionnaire');
+Route::get('/reponse', 'ResponseController@index')->name('reponse');
+Route::get('/deconnexion', 'HomeController@logout');

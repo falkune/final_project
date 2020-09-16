@@ -5,9 +5,8 @@
 @endsection
 
 @section('content')
-  <div id="front_reponse_container">
-    <h1> Bienvenue </h1>
+  <div id="confirmation_container">
     <p>{{$message}}</p>
-    <a href="{{$lien}}">{{$lien}}</a>
+    <a href="{{$lien}}">Vos réponses ici</a>
   </div>
 @endsection

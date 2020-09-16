@@ -5,24 +5,52 @@ body{
 
 #front_index_container{
   width: 80%;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
 }
 
-#front_reponse_container{
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
+#confirmation_container{
+  width: 70%;
+  margin: 15% auto;
+  padding: 5%;
+  text-align: center;
+  background-color: #a8dadc;
+}
+
+#reponse_container{
+  width: 70%;
+  margin: 10px auto;
+  padding: 5px 0px;
+  background-color: #a8dadc;
+}
+
+#reponse_container p{
+  padding: 2% 15%;
+  font-size: larger;
 }
 
 h1{
   text-align: center;
 }
 
+#questions{
+  width: 90%;
+  margin: auto;
+  padding: 40px;
+  background-color: #a8dadc;
+}
+
 .question{
   width: 70%;
-  margin: auto;
+  margin: 2% auto;
   height: 150px;
+  padding: 2%;
+  background: aliceblue;
+}
+
+.reponse{
+  width: 70%;
+  margin: 1% auto;
+  height: 120px;
   padding: 2%;
   background: aliceblue;
 }
@@ -151,4 +179,24 @@ ul{
   margin-bottom: 0 !important;
   background-color: #a8dadc !important;
   border-bottom: none !important;
+}
+
+.footer{
+  width: 80%;
+  margin: auto;
+  padding: 0% 3%;
+}
+
+.footer p{
+  margin: 25px;
+}
+
+#logoimg{
+  width: 30%;
+}
+
+#save_btn{
+  margin: 0px 23px;
+  float: right;
+  width: 200px;
 }

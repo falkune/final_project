@@ -5,7 +5,6 @@ Accueil
 @endsection
 
 @section('contenue')
-	<h1> Les reponses </h1>
 	@foreach($users_responses as $user_response)
 		<table class="table-bordered small alert-dark">
 			<thead class="text-uppercase table-dark table">

@@ -43,10 +43,9 @@ $(function(){
 	      labels: ['SteamVR', 'Occulus store', 'Viveport', 'Playstation VR', 'Google Play', 'Windows store'],
 	      datasets: [{
 	        label: 'My First dataset',
-	        backgroundColor:  ['rgb(165, 42, 42)','rgb(42, 42, 165)','rgb(42, 165, 42)','rgb(245, 245, 245)','rgb(15, 15, 15)','rgb(130, 130, 130)'],
+	        backgroundColor: ['rgb(165, 42, 42)','rgb(42, 42, 165)','rgb(42, 165, 42)','rgb(245, 245, 245)','rgb(15, 15, 15)','rgb(130, 130, 130)'],
 	        borderColor: '#a8dadc',
 	        borderWidth: 3,
-
 	        data: QUESTION_7
 	      }]
 	    },
@@ -59,7 +58,7 @@ $(function(){
 	      labels: ['regarder des émissions TV en direct', 'regarder des films', 'jouer en solo', 'jouer en team'],
 	      datasets: [{
 	        label: 'My First dataset',
-	        backgroundColor:  ['rgb(165, 42, 42)','rgb(42, 42, 165)','rgb(42, 165, 42)','rgb(245, 245, 245)'],
+	        backgroundColor: ['rgb(165, 42, 42)','rgb(42, 42, 165)','rgb(42, 165, 42)','rgb(245, 245, 245)'],
 	        borderWidth: 3,
 	        borderColor: '#a8dadc',
 	        data: QUESTION_10
