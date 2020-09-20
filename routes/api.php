@@ -14,11 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::middleware('auth:api')->get('/user', function (Request $request) {
-//     return $request->user();
-// });
+Route::middleware('auth:api')->get('/user', function (Request $request) {
+  return $request->user();
+});
 
-// Route::get('/admin', 'HomeController@index')->name('accueil');
-// Route::get('/questionnaire', 'HomeController@questionnaire')->name('questionnaire');
-// Route::get('/reponse', 'HomeController@reponse')->name('reponse');
-// Route::get('/deconnexion', 'HomeController@deconnexion');

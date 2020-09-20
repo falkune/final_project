@@ -90,7 +90,7 @@ class ListereponseSeeder extends Seeder
                 'question_id' => 10
             ],
             [
-                'libelle_choix' => 'egarder des films',
+                'libelle_choix' => 'regarder des films',
                 'question_id' => 10
             ],
             [

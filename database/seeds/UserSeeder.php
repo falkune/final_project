@@ -27,6 +27,46 @@ class UserSeeder extends Seeder
                 'password' => NULL,
                 'user_statut' => 'visiteur'
             ],
+            [
+                'email' => 'visiteur3@mail.com',
+                'user_password' => NULL,
+                'user_statut' => 'visiteur'
+            ],
+            [
+                'email' => 'visiteur4@mail.com',
+                'password' => NULL,
+                'user_statut' => 'visiteur'
+            ],
+            [
+                'email' => 'visiteur5@mail.com',
+                'user_password' => NULL,
+                'user_statut' => 'visiteur'
+            ],
+            [
+                'email' => 'visiteur6@mail.com',
+                'password' => NULL,
+                'user_statut' => 'visiteur'
+            ],
+            [
+                'email' => 'visiteur7@mail.com',
+                'user_password' => NULL,
+                'user_statut' => 'visiteur'
+            ],
+            [
+                'email' => 'visiteur8@mail.com',
+                'password' => NULL,
+                'user_statut' => 'visiteur'
+            ],
+            [
+                'email' => 'visiteur9@mail.com',
+                'user_password' => NULL,
+                'user_statut' => 'visiteur'
+            ],
+            [
+                'email' => 'visiteur0@mail.com',
+                'password' => NULL,
+                'user_statut' => 'visiteur'
+            ]
         ]);
     }
 }

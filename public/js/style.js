@@ -30,7 +30,7 @@ $(function(){
 	        label: 'My First dataset',
 	        backgroundColor: ['rgb(165, 42, 42)','rgb(42, 42, 165)','rgb(42, 165, 42)','rgb(245, 245, 245)'],
 	        borderColor: '#a8dadc',
-	        borderWidth: 3,
+	        borderWidth: 2,
 	        data: QUESTION_6
 	      }]
 	    },
@@ -45,7 +45,7 @@ $(function(){
 	        label: 'My First dataset',
 	        backgroundColor: ['rgb(165, 42, 42)','rgb(42, 42, 165)','rgb(42, 165, 42)','rgb(245, 245, 245)','rgb(15, 15, 15)','rgb(130, 130, 130)'],
 	        borderColor: '#a8dadc',
-	        borderWidth: 3,
+	        borderWidth: 2,
 	        data: QUESTION_7
 	      }]
 	    },
@@ -59,7 +59,7 @@ $(function(){
 	      datasets: [{
 	        label: 'My First dataset',
 	        backgroundColor: ['rgb(165, 42, 42)','rgb(42, 42, 165)','rgb(42, 165, 42)','rgb(245, 245, 245)'],
-	        borderWidth: 3,
+	        borderWidth: 2,
 	        borderColor: '#a8dadc',
 	        data: QUESTION_10
 	      }]
@@ -74,7 +74,7 @@ $(function(){
 		    datasets: [{
 		      label: 'Qualité',
 		      backgroundColor:  'rgb(00, 255, 00, 0.1)',
-		      borderWidth: 3,
+		      borderWidth: 2,
 		      borderColor: '#a8dadc',
 		      data: QUESTION_11_TO_15
 		    }]

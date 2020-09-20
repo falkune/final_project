@@ -36,7 +36,10 @@ class SavesurveyController extends Controller
 		$user_id = User::where('email', request('question_1'))->first()->id;
 		$user_link = User::where('email', request('question_1'))->first()->user_link;
 		if($user_link === NULL){
-			$link = uniqid();
+			do{
+				$link = uniqid();
+				$link_exist = User::where('user_link',$link)->first();
+			}while($link_exist !== NULL);
 			$user = User::find($user_id);
 			$user->user_link = $link;
 			$user->save();
