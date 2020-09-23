@@ -27,13 +27,19 @@ $(function(){
 	    data: {
 	      labels: ['Occulus Rift/s', 'HTC Vive', 'Windows Mixed Reality', 'PSVR'],
 	      datasets: [{
-	        label: 'My First dataset',
 	        backgroundColor: ['rgb(165, 42, 42)','rgb(42, 42, 165)','rgb(42, 165, 42)','rgb(245, 245, 245)'],
 	        borderColor: '#a8dadc',
 	        borderWidth: 2,
 	        data: QUESTION_6
 	      }]
 	    },
+	    options: {
+        title: {
+          display: true,
+          fontSize: 16,
+          text: "Marques de casques VR"
+        }
+      }
 		});
 
 		var graphic_2 = document.getElementById('myChart2').getContext('2d');
@@ -42,13 +48,19 @@ $(function(){
 	    data: {
 	      labels: ['SteamVR', 'Occulus store', 'Viveport', 'Playstation VR', 'Google Play', 'Windows store'],
 	      datasets: [{
-	        label: 'My First dataset',
 	        backgroundColor: ['rgb(165, 42, 42)','rgb(42, 42, 165)','rgb(42, 165, 42)','rgb(245, 245, 245)','rgb(15, 15, 15)','rgb(130, 130, 130)'],
 	        borderColor: '#a8dadc',
 	        borderWidth: 2,
 	        data: QUESTION_7
 	      }]
 	    },
+	     options: {
+        title: {
+          display: true,
+          fontSize: 16,
+          text: "Magasins d’application"
+        }
+      }
 		});
 
 		var graphic_3 = document.getElementById('myChart3').getContext('2d');
@@ -57,13 +69,19 @@ $(function(){
 	    data: {
 	      labels: ['regarder des émissions TV en direct', 'regarder des films', 'jouer en solo', 'jouer en team'],
 	      datasets: [{
-	        label: 'My First dataset',
 	        backgroundColor: ['rgb(165, 42, 42)','rgb(42, 42, 165)','rgb(42, 165, 42)','rgb(245, 245, 245)'],
 	        borderWidth: 2,
 	        borderColor: '#a8dadc',
 	        data: QUESTION_10
 	      }]
 	    },
+	    options: {
+        title: {
+          display: true,
+          fontSize: 16,
+          text: 'Utilisation de Bigscreen'
+        }
+      }
 		});
 
 		var graphic_4 = document.getElementById('myChart4').getContext('2d');
@@ -79,6 +97,20 @@ $(function(){
 		      data: QUESTION_11_TO_15
 		    }]
 		  },
+		  options: {
+        title: {
+            display: true,
+            fontSize: 16,
+            text: 'Qualité de service'
+        },
+        scale: {
+            ticks: {
+            beginAtZero: true,
+            max: 5,
+            min: 0
+          }
+        },
+      }
 		});
   }
 
